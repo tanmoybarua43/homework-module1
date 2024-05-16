@@ -1,82 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-  </head>
-  <body>
-    <!-- Container part -->
-    <div class="container">
-      <header>
-        <div class="main-header">
-          <div class="logo">
-            <h3>Great Cliff's Logo</h3>
-          </div>
-          <!-- Navigation Started -->
-          <nav class="main-menu">
-            <ul>
-              <li>Home</li>
-              <li>Cliffs</li>
-              <li>Activities</li>
-              <li>Activities</li>
-            </ul>
-          </nav>
-          <!-- Navigation End -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Header */
+    header {
+      width: 100%;
+      min-height: 400px;
+      padding-top: 3em;
+    }
+
+    #home header {
+      background: no-repeat lightgray url('./images/cliff_ocean.jpg');
+      background-size: 1500px;
+    }
+
+    .main-header {
+      background-color: rgb(255, 255, 255, 0.8);
+      width: auto;
+      margin: 2em auto 0 auto;
+      min-height: 100px;
+      height: 100px;
+    }
+
+    .main-header .logo img {
+      width: 100px;
+      height: 100px;
+      margin: 0 2em 0 0;
+      float: left;
+    }
+
+    /* navigation */
+    .main-menu {
+      margin-left: 227px;
+      font-weight: 400;
+    }
+
+    .main-menu ul li {
+      list-style-type: none;
+      display: inline-block;
+      float: left;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-left: 1px solid rgba(202, 204, 202, 0.6);
+      line-height: 100px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .main-menu ul li a {
+      text-decoration: none;
+      color: #888;
+    }
+
+    .main-menu ul li a:hover {
+      color: #9ed034;
+    }
+
+    .main-menu ul li.active {
+      background: #9ed034;
+      border: none;
+    }
+
+    .main-menu ul li.active a {
+      color: #fff;
+    }
+
+    /* main */
+    main {
+      font-family: Arial, Helvetica, sans-serif;
+      width: 700px;
+      margin: 350px auto 0;
+    }
+
+    main h1 {
+      color: #9ed034;
+      text-align: center;
+    }
+
+    main h2 {
+      color: #333333;
+      margin-top: 20px;
+    }
+
+    main p {
+      color: #666666;
+    }
+
+    /* partners */
+    section {
+      width: 100%;
+      background-color: #4288c3;
+    }
+
+    section #partners {
+      width: 1200px;
+      padding: 2em 0 2em 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    section #partners .partner {
+      display: inline-block;
+      margin: 0 0.75em;
+      padding: 1.3em 1.5em;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    section #partners .partner img {
+      width: 90px;
+      height: 90px;
+    }
+
+    /* footer */
+    footer {
+      width: 100%;
+      height: 155px;
+      padding-bottom: 1em;
+      background-color: #ecfab8;
+    }
+
+    footer #nondisclaimer .copy {
+      padding: 3.5em 3.5em 3.5em 13em;
+      float: left;
+      font-size: 0.9em;
+    }
+
+    footer #nondisclaimer .social {
+      padding: 2.5em;
+      margin-right: 9.25em;
+      float: right;
+    }
+
+    footer #disclaimer {
+      clear: both;
+    }
+
+    footer #disclaimer p {
+      font-size: 0.85em;
+      text-align: center;
+    }
+
+
+    footer #nondisclaimer .social .fa {
+      padding: 15px;
+      font-size: 15px;
+      width: 15px;
+      text-align: center;
+      text-decoration: none;
+      margin: 0 4px;
+      border-radius: 50%;
+    }
+
+    footer #nondisclaimer .social .fa:hover {
+      opacity: 0.7;
+    }
+
+
+    footer #nondisclaimer .social .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    footer #nondisclaimer .social .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    footer #nondisclaimer .social .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+  </style>
+</head>
+
+<body id="home">
+  <!-- Container part -->
+  <div class="main-header">
+    <header>
+      <div class="main-header">
+        <div class="logo">
+          <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
         </div>
-      </header>
-      <!-- Main Content Started -->
-      <main>
-        <h2>Introducing California's Greatest Cliffs</h2>
-        <h3>What is so unique about California cliffs?</h3>
-        <p>
-          California cliffs are one of a kind in the United States where no
-          cliffs are as magnificent and beautiful as them. And California is the
-          only state that have cliffs that fronts all possible environments:
-          sea, river, mountains and canyons. There are four such individual
-          unique cliffs: West Cliff, North Cliff, East Cliff and South Cliff.
-          All offer fantastic overlooking views, recreational areas, camping
-          sites, wildlife watch spots and overnight cabins.
-        </p>
-        <h3>Where are these cliffs?</h3>
-        <p>
-          Located within a 100 mile radius from Irvine, California, they can be
-          reached by roads easily. The closest cliff to Irvine is West Cliff,
-          which is the most popular and most visited.
-        </p>
-        <section>
-          <ul id="partners">
-            <li class="partner"><h3>Partner 1 Image</h3></li>
-            <li class="partner"><h3>Partner 2 Image</h3></li>
-            <li class="partner"><h3>Partner 3 Image</h3></li>
-            <li class="partner"><h3>Partner 4 Image</h3></li>
-            <li class="partner"><h3>Partner 5 Image</h3></li>
-            <li class="partner"><h3>Partner 6 Image</h3></li>
+        <!-- Navigation Started -->
+        <nav class="main-menu">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">Cliffs</a></li>
+            <li><a href="activity.html">Activities</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-        </section>
-      </main>
-      <!-- Main Content Finised -->
-      <!-- Footer Started -->
-      <footer>
-        <div id="nondisclaimer">
-          <div class="copy">
-            <p>&copy; 2020 :: GreatCliffs.com</p>
-          </div>
-          <div class="social">
-            <h3>Facebook Image</h3>
-            <h3>Instagram Image</h3>
-            <h3>Twitter Image</h3>
-          </div>
-        </div>
-        <div id="disclaimer">
-          <p>
-            This website is designed and created solely for educational purposes
-            only at Westcliff University. All contents are not intended for any
-            commercial gain or use.
-          </p>
-        </div>
-      </footer>
-      <!-- Footer Finised -->
+        </nav>
+        <!-- Navigation End -->
+      </div>
+    </header>
+  </div>
+  <!-- Container part End -->
+  <main>
+    <h1>Introducing California's Greatest Cliffs</h1>
+    <h2>What is so unique about California cliffs?</h2>
+    <p>California cliffs are one of a kind in the United States where no cliffs are as magnificent and beautiful as
+      them. And California is the only state that have cliffs that fronts all possible environments: sea, river,
+      mountains and canyons. There are four such individual unique cliffs: West Cliff, North Cliff, East Cliff and South
+      Cliff. All offer fantastic overlooking views, recreational areas, camping sites, wildlife watch spots and
+      overnight cabins.</p>
+    <h2>Where are these cliffs?</h2>
+    <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. The closest cliff
+      to Irvine is West Cliff, which is the most popular and most visited.</p>
+  </main>
+  <section>
+    <ul id="partners">
+      <li class="partner"><img src="./images/partner-bustour.png" alt="Partner Bus Tour"></li>
+      <li class="partner"><img src="./images/partner-cabinrental.png" alt="Partner Cabin Rental"></li>
+      <li class="Partner Camping Adventure"></li>
+      <li class="partner"><img src="./images/partner-collegetours.png" alt="Partner College Tour"></li>
+      <li class="partner"><img src="./images/partner-rentalbike.png" alt="Partner Bike Rental"></li>
+      <li class="partner"><img src="./images/partner-tourgroup.png" alt="Partner Tour Group"></li>
+    </ul>
+  </section>
+  <!-- Footer Started -->
+  <footer>
+    <div id="nondisclaimer">
+      <div class="copy">
+        <p>&copy; 2020 :: GreatCliffs.com</p>
+      </div>
+      <div class="social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+      </div>
     </div>
-  </body>
+    <div id="disclaimer">
+      <p>
+        This website is designed and created solely for educational purposes
+        only at Westcliff University. All contents are not intended for any
+        commercial gain or use.
+      </p>
+    </div>
+  </footer>
+  <!-- Footer Finised -->
+</body>
+
 </html>
