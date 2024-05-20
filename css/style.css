@@ -13,6 +13,10 @@ header {
   background: no-repeat lightgray url("../images/runfly.jpg");
   background-size: 1500px;
 }
+#cliffs header {
+  background: no-repeat lightgray url("../images/forest_cliff.jpg");
+  background-size: 1500px;
+}
 #contact header {
   background: no-repeat lightgray url("../images/runfly.jpg");
   background-size: 1500px;
@@ -306,4 +310,36 @@ legend {
 
 .button input[type="submit"]:hover {
     background-color: #357ab7;
+}
+
+/* cliffs page */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #8b1e1e;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
