@@ -1,3 +1,21 @@
+$(document).ready(function() {
+  // Select only table cells in tbody that are not labeled 'Not Available'
+  $('tbody td').not(':contains("Not Available")').click(function() {
+      // Toggle a 'selected' class that changes the background color
+      $(this).toggleClass('selected');
+  });
+
+  // Change cursor on hover for selectable cells
+  $('tbody td').not(':contains("Not Available")').hover(function() {
+      $(this).css('cursor', 'pointer');
+  }, function() {
+      $(this).css('cursor', 'default');
+  });
+
+  // Apply 'not-allowed' cursor to 'Not Available' cells
+  $('td:contains("Not Available")').css('cursor', 'not-allowed');
+});
+
 window.onload = function() {
   disableButton(true); // Initially disable the button
 };
