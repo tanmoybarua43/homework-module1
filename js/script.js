@@ -26,8 +26,9 @@ $(document).ready(function(){
       $('.box').fadeIn();
 
       //Check if lightbox has an image
-      if ($('.box').contents('img')) {
-          $('.box').contents().remove('img'); //If true, clear image
+      if ($('.box').contents('img') && $('.box').contents('h3')) {
+          $('.box').contents().remove('img');
+          $('.box').contents().remove('h3');
       }
 
       //Get text content in attribute
@@ -37,8 +38,10 @@ $(document).ready(function(){
     
 
       if ($altvalue==true) {
-          var img = $('.card:nth-child('+(imgNum-1)+') img').clone(); //Duplicate DOM element
-          $('.box').append(img); //Insert duplicated element in another element
+          var img = $('.card:nth-child('+(imgNum-1)+') img').clone();
+          var name = $('.card:nth-child('+(imgNum-1)+') .card-header').text(); 
+          
+          $('.box').append(img, '<h3>' + name + '</h3>'); //Insert duplicated element in another element
       }
   });
 
