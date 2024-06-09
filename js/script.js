@@ -1,69 +1,56 @@
+
+
+
+
 $(document).ready(function() {
-  // Select only table cells in tbody that are not labeled 'Not Available'
+  
   $('tbody td').not(':contains("Not Available")').click(function() {
-      // Toggle a 'selected' class that changes the background color
+      
       $(this).toggleClass('selected');
   });
 
-  // Change cursor on hover for selectable cells
+  
   $('tbody td').not(':contains("Not Available")').hover(function() {
       $(this).css('cursor', 'pointer');
   }, function() {
       $(this).css('cursor', 'default');
   });
 
-  // Apply 'not-allowed' cursor to 'Not Available' cells
-  $('td:contains("Not Available")').css('cursor', 'not-allowed');
 });
 
-window.onload = function() {
-  disableButton(true); // Initially disable the button
-};
-//Function to generate combination of characters
-function generateCode() {
-  var code = "";
-  var btnValue; // This controls the disabled state of the button
-  var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$";
+$(document).ready(function(){
 
-  //Generate character multiple times using a loop
-  for (i = 1; i <= 8; i++) {
-    var char = Math.random() * str.length;
-    code += str.charAt(char);
-  }
-  return code; //return the final accumulated string when loop ends
-}
+  /* Open lightbox on button click */
+  $('.lightbox-toggle img').click(function(){
+      $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
+      $('.box').fadeIn();
 
-//Get HTML element to display
-var genCode = generateCode();
+      //Check if lightbox has an image
+      if ($('.box').contents('img')) {
+          $('.box').contents().remove('img'); //If true, clear image
+      }
 
-document.getElementById("codes").innerHTML = genCode;
+      //Get text content in attribute
+      var $altvalue = $(this).hasClass('card-image'); //or var altvalue = $(this).attr('alt');
+      console.log($altvalue);
+      var imgNum = $(this).attr('alt');
+    
 
-//Disable Button
-function disableButton(btnValue) {
-  var button = document.getElementById('submit');
-  if (btnValue) {
-      button.style.backgroundColor = "gray"; // Button appears disabled
-      button.disabled = true;
-  } else {
-      button.style.backgroundColor = "blue"; // Button appears enabled
-      button.disabled = false;
-  }
-}
+      if ($altvalue==true) {
+          var img = $('.card:nth-child('+(imgNum-1)+') img').clone(); //Duplicate DOM element
+          $('.box').append(img); //Insert duplicated element in another element
+      }
+  });
 
+  /* Click to close lightbox */
+  $('.close, .backdrop').click(function(){
+      $('.backdrop').animate({'opacity':'0'}, 300, 'linear', function(){
+          $('.backdrop').css('display', 'none');
+      });
+      $('.box').fadeOut();
+  });
 
-
-document.getElementById('codeInput').addEventListener('input', evaluateCode);
-
-function evaluateCode() {
-  var inputCode = document.getElementById('codeInput').value.trim();
-  var generatedCode = genCode.trim(); // Assuming 'code' is set somewhere as the generated code
-  console.log(generatedCode);
-  if (inputCode === generatedCode) {
-      disableButton(false); // Enable the button if the codes match
-  } else {
-      disableButton(true); // Keep the button disabled if the codes do not match
-  }
-}
+});
 
 
-disableButton();
+
