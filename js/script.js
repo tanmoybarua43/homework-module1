@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function() {
   
   $('tbody td').not(':contains("Not Available")').click(function() {
