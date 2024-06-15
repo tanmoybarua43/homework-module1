@@ -416,28 +416,28 @@ legend {
   width: 100%;
 }
 
-#activities main #displaySelected {
-  /* visibility: hidden; */
+#activity main #displaySelected {
+  visibility: hidden;
   margin: 0 auto;
   width: 600px;
   border: 2px solid #9ed034;
   padding: 20px;
   border: 1px solid black;
 }
-#activities main #displaySelected #result,
-#activities main #displaySelected #sendinfo {
+#activity main #displaySelected #result,
+#activity main #displaySelected #sendinfo {
   display: inline-block;
   margin: 0;
 }
-#activities main #result {
+#activity main #result {
   min-height: 50px;
   width: 300px;
   padding: 0;
 }
-#activities main #result h4 {
+#activity main #result h4 {
   margin-bottom: 1em;
   font-size: 1.15em;
 }
-#activities main #displaySelected #sendinfo input[type="email"] {
+#activity main #displaySelected #sendinfo input[type="email"] {
   width: 200px;
 }

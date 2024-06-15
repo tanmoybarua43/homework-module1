@@ -7,7 +7,7 @@ $(document).ready(function() {
       $('#displaySelected').show();
 
       if ($(this).hasClass("selected")) { //check if selected cell has class 
-        // $('#displaySelected').css("visibility", "visible"); //make display box visible 
+        $('#displaySelected').css("visibility", "visible"); //make display box visible 
         $('#displaySelected').css("margin","2em 0"); 
         $('#displaySelected').css("border","1px solid black");
         $('#displaySelected').css("padding","20px");////add spaces above display box 
@@ -46,7 +46,7 @@ $(document).ready(function(){
 
       //Get text content in attribute
       var $altvalue = $(this).hasClass('card-image'); //or var altvalue = $(this).attr('alt');
-      console.log($altvalue);
+      // console.log($altvalue);
       var imgNum = $(this).attr('alt');
     
 
